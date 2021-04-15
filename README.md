@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![react js](https://miro.medium.com/max/3840/1*vHHBwcUFUaHWXntSnqKdCA.png)
 
-## Available Scripts
+## Definisi
 
-In the project directory, you can run:
+React Merupakan sebuah Libraray pada Javascript untuk membuat sebuah User Interface.
 
-### `yarn start`
+## Persiapan
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+untuk menggunakan react, teman membutuhkan beberapa hal berikut :
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Nodejs
+   bisa di install di [Link](https://nodejs.org/en/) ini
+2. Vscode
+   Vscode merupakan sebuah code editor yang kami rekomendasikan, silakan teman teman download [disini](https://code.visualstudio.com/)
+3. Terminal / CMD
+   Merupakan sebuah aplikasi untuk menjalankan console pada laptop atau komputer kita. Untuk user Windows, Kami merekomendasikan menggunakan [GitBash](https://git-scm.com/downloads) atau [cygwin](https://www.cygwin.com/).
+   Instalasi paling mudah adalah dengan mengunakan gitbash, karena cygwin membutuhkan beberapa pengaturan tambahan.
+4. Quota Internet
+   Teman teman harus terhubung ke internet untuk bisa menggunakan react, karena react membutuhkan package yagn harus di download.
 
-### `yarn test`
+## Instalasi
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Silakan install apa saja yang disebutkan di bagian persiaoan, apabila sudah, silakan buka terminal / gitbash / cygwin / cmd, dan jalankan syntax berikut :
 
-### `yarn build`
+`npx create-react-app [nama projectnya]`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+contoh :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npx create-react-app myapp`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Setlah proses installasi selesai akan ada message seperti berikut :
+`\{><}/ Happy codding`
 
-### `yarn eject`
+SIlakan teman teman masuk kedalam project foldernya dengan cara :
+`cd myapp`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Development
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+yeay saatnya kita ngoding.. silakan teman teman buka vscode di project kita dengan menjalankan syntax berikut pada terminal :
+`code .`
+Artinya adalah kita membuka VSCODE di folder kita berada pada terminal.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Struktur Folder React
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![react structur folder](https://i.ibb.co/RY27Kc3/Screen-Shot-2021-01-13-at-17-10-14.png)
 
-## Learn More
+## Struktur Folder React
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Bisa teman teman lihat pada gambar diatas, merupakan struktur dasar project react, yagn dibuat dengan _create-react-app_.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### node_modules
 
-### Code Splitting
+Node modules merupakan sebuah folder yang berisi setiap module yang dibutuhkan untuk project react kita ini.
+Folder ini dibentuk automatis setelah kita menginstall react menggunakan _create-react-app_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### public
 
-### Analyzing the Bundle Size
+Folder public adalah folder yang berisi setiap file static dalam project react kita. Disinilah terdapat satu satunya folder index.html. dan kebutuhan file lain seperti icon, robot.txt dan lain lain.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### src
 
-### Making a Progressive Web App
+Folder src merupakan folder yang berisi file file Js yang utama yang ada pada project react kita ini.
+Component dan lain lain harus di letakan di dalam folder kita ini.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### _file .gitignore_
 
-### Advanced Configuration
+.gitignore merupakan file yang sudah disiapkan oleh create-react-app unutk mencegah file atau folder yang tidak diinginkan untuk di upload ke git, karena alasan keamanan dan lain lain.
+Contoh file yang sebaiknya tidak di upload ke GIT :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- node_modules
+- .env
+- dan file creadentials lainnya
 
-### Deployment
+### _package.json_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Package.json merupakan sebuah file config yang berisi keterangan project kita, dependencies atau package apa aja yang di install dan lain lain.
 
-### `yarn build` fails to minify
+## Konfigurasi awal project react
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. SIlakan teman teman buka file bernama manifest.json yang berada pada public folder dan isi data sesuai dengan nama project kita.
+
+```json
+"short_name": "nama aplikasi teman2",
+"name": "COntoh Nama",
+```
+
+2. Silakan ganti file App.js menjadi App.jsx.
+   Hal ini bertujuan agar kita dapat menggunakan JSX pada file tersebut.
+
+3. Atur Global CSS pada project react kita, buka file index.css pada folder src dan atur seperti code dibawah ini.
+
+```css
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+P {
+  line-height: 2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+```
+
+**_Happy Coding_ !!!**
